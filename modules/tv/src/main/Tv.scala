@@ -50,8 +50,6 @@ final class Tv(
 
   def getBestGame = getGame(Tv.Channel.Best) orElse gameRepo.random
 
-  def getBestAndHistory = getGameAndHistory(Tv.Channel.Best)
-
   def getChampions: Fu[Champions] =
     trouper.ask[Champions](TvSyncActor.GetChampions.apply)
 

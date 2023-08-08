@@ -12,6 +12,7 @@ import lila.streamer.LiveStreams
 import lila.swiss.Swiss
 import lila.timeline.Entry
 import lila.tournament.{ Tournament, Winner }
+import lila.tv.Tv.Channel
 import lila.ublog.UblogPost
 import lila.user.LightUserApi
 import lila.user.{ User, Me }
@@ -68,7 +69,7 @@ final class Preload(
       tours.mon(_.lobby segment "tours") zip
       events.mon(_.lobby segment "events") zip
       simuls.mon(_.lobby segment "simuls") zip
-      tv.getBestGame.mon(_.lobby segment "tvBestGame") zip
+      tv.getTvGame(Channel.Best).mon(_.lobby segment "tvBestGame") zip
       (ctx.userId so timelineApi.userEntries).mon(_.lobby segment "timeline") zip
       userCached.topWeek.mon(_.lobby segment "userTopWeek") zip
       tourWinners.all.dmap(_.top).mon(_.lobby segment "tourWinners") zip

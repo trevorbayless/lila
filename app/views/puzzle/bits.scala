@@ -96,7 +96,6 @@ object bits:
   private val trainingI18nKeys = baseI18nKeys ::: List(
     trans.puzzle.example,
     trans.puzzle.dailyPuzzle,
-    trans.puzzle.addAnotherTheme,
     trans.puzzle.difficultyLevel,
     trans.rated,
     trans.puzzle.yourPuzzleRatingWillNotChange,
@@ -114,5 +113,6 @@ object bits:
     trans.puzzle.yourStreakX,
     trans.puzzle.streakSkipExplanation,
     trans.puzzle.continueTheStreak,
-    trans.puzzle.newStreak
+    trans.puzzle.newStreak,
+    trans.puzzle.addAnotherTheme
   ) ::: themeI18nKeys

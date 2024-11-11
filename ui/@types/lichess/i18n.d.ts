@@ -2049,7 +2049,7 @@ interface I18n {
     ratedGames: string;
     /** Rating deviation: %s. */
     ratingDeviation: I18nFormat;
-    /** Lower value means the rating is more stable. Above %1$s, the rating is considered provisional. To be included in the rankings, this value should be below %2$s (standard chess) or %3$s (variants). */
+    /** Lower value means the rating is more stable. Above %1$s, the rating is considered provisional. To be included in the rankings, this value must be below %2$s (standard chess) or %3$s (variants). */
     ratingDeviationTooltip: I18nFormat;
     /** Time spent playing */
     timeSpentPlaying: string;
